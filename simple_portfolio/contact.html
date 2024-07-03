@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="logo">Deepanshi<span> Tomar</span></a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="edu.html" target="_self">Education</a>
+            <a href="projects.html" target="_self">Projects</a>
+            <a href="skill.html" target="_self">Skills</a>
+            <a href="#certifications">Certifications</a>
+            <a href="contact.html" class="active">Contact</a>
+            <i class='bx bx-moon' id="icon"></i>
+        
+        </nav>
+        </header>
+        <!-- banner section  -->
+    <section class="banner">
+        <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20230822131732/images.png"
+            alt="Welcome to our Contact Us page">
+        <h1>Get in Touch With Us</h1>
+        <p>
+          We're here to answer any questions you may have.
+          </p>
+    </section>
+ 
+    <!-- Contact form -->
+    <section class="contact-form">
+        <div class="form-container">
+            <h2>Your Details</h2>
+            <form action="process.php" method="POST">
+ 
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" required>
+ 
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" required>
+ 
+                <label for="phone">Phone: </label>
+                <input type="tel" id="phone" name="phone">
+ 
+                <label for="message">Message: </label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+ 
+                <button type="submit" class="submit-button" name="btn-send">Submit</button>
+            </form>
+        </div>
+    </section>
+ 
+    <!-- Company contact info -->
+    <section class="contact-info">
+        <h2>Contact Information</h2>
+        <address>
+            Deepanshi Tomar<br>
+           DA Block Hari Nagar New Delhi<br>
+            pin Code:110064<br>
+            Phone: <a href="tel:9818478984">9818478984</a><br>
+            Email: <a href="mailto:tomar.deepanshi2003@gmail.com">tomar.deepanshi2003@gmail.com</a>
+        </address>
+    </section>
+ 
+    <!-- Footer section -->
+    <footer>
+        <p>
+          © Deepanshi Tomar. All rights reserved.
+          </p>
+    </footer>
+    <?php
+    if (isset($_POST['btn-send'])){
+        echo 'working'
+    }
+    
+    
+    
+    ?>
+</body>
+</html>

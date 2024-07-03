@@ -1,0 +1,140 @@
+@property --gradient{
+    syntax:"<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins",sans-serif;
+}
+html{
+    font-size: 50%;
+   
+    overflow-x: hidden;
+}
+:root{
+    --bg-color:white;
+    --second-bg-color: #161616;
+    --text-color:#012969;
+    --main-color:#BE0B31;
+}
+.header{
+    position:relative;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
+    color: var(--main-color);
+}
+
+.logo{
+    font-size: 3rem;
+    color:var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition:0.3s ease ;
+}
+.logo:hover{
+    transform:scale(1.1);
+}
+
+
+.navbar a{
+    font-size:1.8rem;
+    color:var(--text-color);
+    font-weight: 500;
+    margin-left: 4rem;
+    transition:0.3s ease ;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+#menu-icon{
+    font-size:3.6rem;
+    color: var(--main-color);
+    display:none;
+}
+
+body{
+    display: grid;
+    place-items:center;
+    height: 100vh;
+    background: var(--bg-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.container,.container2{
+    display: flex;
+    gap:4rem;
+    
+}
+.container{
+    margin-top: 11rem;
+    margin-bottom: 5rem;
+}
+
+.card,.card2,.card3,.card4,.card5,.card6{
+    width:300px;
+    height: 300px;
+    background-color:var(--bg-color);
+    border-radius: 2rem;
+    position: relative;
+    
+}
+.card::before,.card::after,.card2::before,.card2::after,.card3::before,.card3::after,.card4::before,.card4::after,.card5::before,.card5::after,.card6::before,.card6::after{
+    content: "";
+    position:absolute;
+    background: linear-gradient(var(--gradient),var(--main-color),var(--text-color));
+    inset:-.8rem;
+    border-radius: inherit;
+    z-index: -1;
+    animation: rotation 5s infinite linear;
+}
+.card::after,.card2::after,.card3::after,.card4::after,.card5::after,.card6::after{
+    filter: blur(0.2rem);
+}
+@keyframes rotation{
+    0%{
+       --gradient:0deg;
+    }
+    100%{
+        --gradient:360deg;
+    }
+}
+.card, .card2,.card3,.card4,.card5,.card6 p{
+    padding: 1rem;
+    color: var(--text-color);
+    align-items: justify;
+    font-size: .9rem;
+}
+.card h1,.card2 h1,.card5 h1,.card6 h1{
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 4.5rem;
+}
+.card p,.card2 p , .card5 p,.card6 p{
+    font-size: 1.5rem;
+    text-align:center;
+}
+.card3 img, .card4 img{
+    width:290px;
+    height: 290px;
+    border-radius: 2rem;
+}
+
+

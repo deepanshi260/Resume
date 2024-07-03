@@ -1,0 +1,233 @@
+@property --gradient{
+    syntax:"<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins",sans-serif;
+
+}
+:root{
+    --bg-color:white;
+    --second-bg-color: #161616;
+    --text-color:#012969;
+    --main-color:#BE0B31;
+}
+html{
+    font-size: 50%;
+    overflow-x: hidden;
+}
+body{
+    background: rgb(245, 245, 243);
+    color: var(--text-color);
+}
+.header{
+    position:relative;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
+    color: var(--main-color);
+    }
+
+.logo{
+    font-size: 3rem;
+    color:var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition:0.3s ease ;
+}
+.logo:hover{
+    transform:scale(1.1);
+}
+
+.navbar a{
+    
+    font-size:1.8rem;
+    color:var(--text-color);
+    font-weight: 500;
+    margin-left: 4rem;
+    transition:0.3s ease ;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+#menu-icon{
+    font-size:3.6rem;
+    color: var(--main-color);
+    display:none;
+}
+.container{
+    width:100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+.head h1{
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;  
+    margin-top: 20px;
+}
+.skill h2{
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color:var(--main-color);
+    font-size: 16px;
+    
+
+}
+.progress{
+    background: #959595;
+    width: 600px;
+    height: 10px;
+    border-radius: 5px;
+}
+.progress:hover{
+    color:var(--text-color);
+    transform: scale(1.3)translateY(-5px);
+    background-color: white;
+    box-shadow: 0 0 25px var(--text-color);
+    border-radius: 5px;
+}
+.progress div{
+    height: 10px;
+    border-radius: 5px;
+    width: 0%;
+    }
+.progress div span{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: rgb(245, 245, 243);
+    float: right;
+    margin-top: -15px;
+    margin-right: -20px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.html{
+    background: linear-gradient( 135deg,#b568c4,var(--text-color));
+    animation: html 1s linear forwards;
+}
+@keyframes html{
+    100%{
+        width:89%;
+    }
+}
+
+.css{
+    background: linear-gradient( 135deg,#b568c4,var(--text-color));
+    animation: css 1s linear forwards;
+}
+@keyframes css{
+    100%{
+        width:85%;
+    }
+}
+
+
+.javascript{
+    background: linear-gradient( 135deg,#b568c4,var(--text-color));
+    animation: javascript 1s linear forwards;
+}
+@keyframes javascript{
+    100%{
+        width:55%;
+    }
+}
+
+.python{
+    background: linear-gradient( 135deg,#b568c4,var(--text-color));
+    animation: python 1s linear forwards;
+}
+@keyframes python{
+    100%{
+        width:90%;
+    }
+}
+
+.java{
+    background: linear-gradient( 135deg,#b568c4,var(--text-color));
+    animation: java 1s linear forwards;
+}
+@keyframes java{
+    100%{
+        width:70%;
+    }
+}
+
+.sql{
+    background: linear-gradient( 135deg,#b568c4,var(--text-color));
+    animation: sql 1s linear forwards;
+}
+@keyframes sql{
+    100%{
+        width:80%;
+    }
+}
+
+.mongodb{
+    background: linear-gradient( 135deg,#b568c4,var(--text-color));
+    animation: mongodb 1s linear forwards;
+}
+@keyframes mongodb{
+    100%{
+        width:50%;
+    }
+}
+
+.c{
+    background: linear-gradient( 135deg,#b568c4,var(--text-color));
+    animation: c 1s linear forwards;
+}
+@keyframes c{
+    100%{
+        width:90%;
+    }
+}
+.html span{
+    border:1px solid var(--text-color);
+}
+.css span{
+    border:1px solid var(--text-color);
+}
+.javascript span{
+    border:1px solid var(--text-color);
+}
+.python span{
+    border:1px solid var(--text-color);
+}
+.java span{
+    border:1px solid var(--text-color);
+}
+.sql span{
+    border:1px solid var(--text-color);
+}
+.mongodb span{
+    border:1px solid var(--text-color);
+}
+.c span{
+    border: 1px solid  var(--text-color);
+}
